@@ -13,7 +13,9 @@ as day_type,
 
 
 from 
-{{ source('demo', 'bike') }}
+
+{{ ref('stage_bike') }}
+--{{ source('demo', 'bike') }}
 where ride_id != 'ride_id'
 )
 
